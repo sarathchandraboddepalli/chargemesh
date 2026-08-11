@@ -1,0 +1,105 @@
+{
+  "boot_notification": {
+    "message_type": 2,
+    "unique_id": "boot-001",
+    "action": "BootNotification",
+    "payload": {
+      "chargePointVendor": "ABB",
+      "chargePointModel": "Terra AC W22",
+      "chargePointSerialNumber": "SN-MUM-001",
+      "firmwareVersion": "1.2.3",
+      "iccid": "8991101200000040016"
+    },
+    "expected_response": {
+      "currentTime": "2026-08-07T08:00:00Z",
+      "interval": 300,
+      "status": "Accepted"
+    }
+  },
+  "heartbeat": {
+    "message_type": 2,
+    "unique_id": "hb-001",
+    "action": "Heartbeat",
+    "payload": {},
+    "expected_response": {
+      "currentTime": "2026-08-07T08:05:00Z"
+    }
+  },
+  "status_notification_available": {
+    "message_type": 2,
+    "unique_id": "sn-001",
+    "action": "StatusNotification",
+    "payload": {
+      "connectorId": 1,
+      "errorCode": "NoError",
+      "status": "Available",
+      "timestamp": "2026-08-07T08:00:01Z"
+    },
+    "expected_response": {}
+  },
+  "status_notification_charging": {
+    "message_type": 2,
+    "unique_id": "sn-002",
+    "action": "StatusNotification",
+    "payload": {
+      "connectorId": 1,
+      "errorCode": "NoError",
+      "status": "Charging",
+      "timestamp": "2026-08-07T10:30:00Z"
+    },
+    "expected_response": {}
+  },
+  "start_transaction": {
+    "message_type": 2,
+    "unique_id": "st-001",
+    "action": "StartTransaction",
+    "payload": {
+      "connectorId": 1,
+      "idTag": "MH02AB1234",
+      "meterStart": 0,
+      "timestamp": "2026-08-07T10:30:00Z"
+    },
+    "expected_response": {
+      "transactionId": 1001,
+      "idTagInfo": {"status": "Accepted"}
+    }
+  },
+  "meter_values": {
+    "message_type": 2,
+    "unique_id": "mv-001",
+    "action": "MeterValues",
+    "payload": {
+      "connectorId": 1,
+      "transactionId": 1001,
+      "meterValue": [
+        {
+          "timestamp": "2026-08-07T11:00:00Z",
+          "sampledValue": [
+            {
+              "value": "7500",
+              "measurand": "Energy.Active.Import.Register",
+              "unit": "Wh",
+              "context": "Sample.Periodic"
+            }
+          ]
+        }
+      ]
+    },
+    "expected_response": {}
+  },
+  "stop_transaction": {
+    "message_type": 2,
+    "unique_id": "stp-001",
+    "action": "StopTransaction",
+    "payload": {
+      "meterStop": 15000,
+      "timestamp": "2026-08-07T12:00:00Z",
+      "transactionId": 1001,
+      "reason": "Local",
+      "idTag": "MH02AB1234"
+    },
+    "expected_response": {
+      "idTagInfo": {"status": "Accepted"}
+    }
+  }
+}

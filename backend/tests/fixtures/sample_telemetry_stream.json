@@ -1,0 +1,74 @@
+[
+  {
+    "vehicle_id": "00000000-0000-0000-0000-000000000001",
+    "oem_vehicle_id": "OLA-S1P-CRIT-001",
+    "registration_number": "MH02AB1234",
+    "scenario": "low_soc_critical",
+    "telemetry": [
+      {
+        "recorded_at": "2026-08-07T08:00:00+05:30",
+        "state_of_charge": 90.0,
+        "state_of_health": 94.5,
+        "latitude": 18.9220,
+        "longitude": 72.8347,
+        "speed_kmh": 0.0,
+        "battery_temp_celsius": 32.0,
+        "ambient_temp_celsius": 28.0,
+        "odometer_km": 15420.0,
+        "is_charging": false,
+        "estimated_range_km": 163.0
+      },
+      {
+        "recorded_at": "2026-08-07T10:00:00+05:30",
+        "state_of_charge": 65.0,
+        "battery_temp_celsius": 37.0,
+        "ambient_temp_celsius": 34.0,
+        "speed_kmh": 28.0,
+        "is_charging": false,
+        "estimated_range_km": 117.0,
+        "latitude": 18.9350,
+        "longitude": 72.8420
+      },
+      {
+        "recorded_at": "2026-08-07T13:00:00+05:30",
+        "state_of_charge": 18.0,
+        "battery_temp_celsius": 40.0,
+        "ambient_temp_celsius": 39.0,
+        "speed_kmh": 12.0,
+        "is_charging": false,
+        "estimated_range_km": 32.0,
+        "latitude": 18.9180,
+        "longitude": 72.8280,
+        "note": "CRITICAL: 3 deliveries remaining, range insufficient — dispatch triggered"
+      }
+    ]
+  },
+  {
+    "vehicle_id": "00000000-0000-0000-0000-000000000002",
+    "oem_vehicle_id": "ATHER-450X-THERM-001",
+    "registration_number": "KA01AB5678",
+    "scenario": "thermal_spike",
+    "telemetry": [
+      {
+        "recorded_at": "2026-08-07T08:00:00+05:30",
+        "state_of_charge": 88.0,
+        "battery_temp_celsius": 33.0,
+        "ambient_temp_celsius": 27.0,
+        "is_charging": false,
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "recorded_at": "2026-08-07T12:30:00+05:30",
+        "state_of_charge": 22.0,
+        "battery_temp_celsius": 46.0,
+        "ambient_temp_celsius": 41.0,
+        "is_charging": true,
+        "charging_power_kw": 2.4,
+        "latitude": 12.9784,
+        "longitude": 77.6408,
+        "note": "THERMAL ALERT: 46°C during noon fast-charge at Statiq Indiranagar"
+      }
+    ]
+  }
+]
